@@ -4,6 +4,7 @@ body {
     height: 100vh;
     background-color: #000; /* Black background */
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     color: #843CFA; /* Purple text */
@@ -38,7 +39,6 @@ a {
 }
 
 .back-button:hover {
-
     box-shadow: 0 0 20px #948EFA /* Glowing effect on hover */
 }
 
@@ -60,9 +60,10 @@ a {
     border: #843CFA 2px solid;
     border-radius: 20px;
     width: 100%; /* Full width in smaller screens */
-    height: 300px;
+    height: 250px;
     margin: 10px;
 }
+
 .box-text {
     color: #843CFA; /* Golden text */
     font-size: 1.5rem;
@@ -74,11 +75,10 @@ a {
     box-shadow: 0 0 20px #948EFA; /* Corrected box-shadow */
 }
 
-
 /* Contact Box Styling */
 .contact-box {
     width: 60%; /* Box width */
-    height: 400px; /* Box height */
+    height: auto; /* Box height */
     background-color: #060709; /* Dark gray background */
     border: 2px solid #843CFA; /* Purple border */
     border-radius: 8px;
@@ -100,7 +100,6 @@ h2 {
 p {
     font-size: 1.2rem; /* Golden text */
 }
-
 
 /* Home Section */
 #home h1 {
@@ -199,4 +198,118 @@ p {
     transform: translate(2px, 2px);
     clip-path: inset(0 0 0 50%);
     animation: glitch 2s infinite alternate;
+}
+
+/* Media Queries for Mobile Responsiveness */
+
+/* Small Devices (Phones) */
+@media (max-width: 576px) {
+    /* Home Section */
+    #home h1 {
+        font-size: 2rem;
+    }
+
+    /* Button */
+    #home button {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
+
+    /* Boxes Styling */
+    .box-style {
+        height: 200px; /* Adjusted box height */
+    }
+
+    .box-text {
+        font-size: 1.2rem; /* Reduced text size */
+    }
+
+    /* Contact Box */
+    .contact-box {
+        width: 90%; /* Full width on mobile */
+        height: auto; /* Adjusted height */
+    }
+
+    .box-content {
+        padding: 1rem;
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Smaller font size */
+    }
+
+    p {
+        font-size: 1rem; /* Adjusted text size */
+    }
+}
+
+/* Medium Devices (Tablets) */
+@media (max-width: 768px) {
+    /* Home Section */
+    #home h1 {
+        font-size: 3rem;
+    }
+
+    /* Button */
+    #home button {
+        font-size: 1.1rem;
+        padding: 0.7rem 1.2rem;
+    }
+
+    /* Boxes Styling */
+    .box-style {
+        height: 250px; /* Slightly smaller height */
+    }
+
+    .box-text {
+        font-size: 1.4rem;
+    }
+
+    /* Contact Box */
+    .contact-box {
+        width: 80%;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+    }
+}
+
+/* Large Devices (Desktops) */
+@media (min-width: 992px) {
+    /* Home Section */
+    #home h1 {
+        font-size: 4rem;
+    }
+
+    /* Button */
+    #home button {
+        font-size: 1.2rem;
+    }
+
+    /* Boxes Styling */
+    .box-style {
+        height: 300px;
+    }
+
+    .box-text {
+        font-size: 1.5rem;
+    }
+
+    /* Contact Box */
+    .contact-box {
+        width: 60%;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
 }
