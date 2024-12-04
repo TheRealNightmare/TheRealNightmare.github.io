@@ -9,6 +9,8 @@ body {
     justify-content: center;
     color: #843CFA; /* Purple text */
     text-align: center;
+    overflow-x: auto; /* Allows horizontal scrolling if needed */
+    max-width: 100%; /* Prevents horizontal overflow */
 }
 
 a {
@@ -39,7 +41,7 @@ a {
 }
 
 .back-button:hover {
-    box-shadow: 0 0 20px #948EFA /* Glowing effect on hover */
+    box-shadow: 0 0 20px #948EFA; /* Glowing effect on hover */
 }
 
 .back-button i {
@@ -47,10 +49,6 @@ a {
 }
 
 /* Boxes Styling */
-.box {
-    /* Add box styling */
-}
-
 .box-style {
     text-align: center;
     display: flex;
@@ -62,27 +60,31 @@ a {
     width: 100%; /* Full width in smaller screens */
     height: 250px;
     margin: 10px;
+    flex-shrink: 1; /* Shrinks the box when necessary */
+    min-width: 300px; /* Prevents the box from becoming too small */
+    max-width: 100%;
 }
 
 .box-text {
-    color: #843CFA; /* Golden text */
+    color: #843CFA; /* Purple text */
     font-size: 1.5rem;
     font-weight: bold;
 }
 
 .box-style:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 20px #948EFA; /* Corrected box-shadow */
+    box-shadow: 0 0 20px #948EFA; /* Glowing effect */
 }
 
 /* Contact Box Styling */
 .contact-box {
-    width: 60%; /* Box width */
-    height: auto; /* Box height */
+    width: 60%;
+    height: auto;
     background-color: #060709; /* Dark gray background */
     border: 2px solid #843CFA; /* Purple border */
     border-radius: 8px;
     box-shadow: 0 0 15px #948EFA;
+    overflow-wrap: break-word; /* Prevents overflow from long text */
 }
 
 .box-content {
@@ -98,14 +100,13 @@ h2 {
 }
 
 p {
-    font-size: 1.2rem; /* Golden text */
+    font-size: 1.2rem; /* Purple text */
 }
 
 /* Home Section */
 #home h1 {
     font-size: 4rem;
     font-weight: bold;
-    /* text-shadow: 0 0 20px rgba(255, 255, 255, 0.5); */
     margin-bottom: 1.5rem; /* Space between heading and button */
     position: relative; /* Required for pseudo-elements */
     animation: glitch 2s infinite;
@@ -127,53 +128,13 @@ p {
 
 /* Glitch Animation */
 @keyframes glitch {
-    0% {
-        transform: translate(0, 0);
-        opacity: 1;
-    }
-    10% {
-        transform: translate(-2px, 2px);
-        opacity: 0.8;
-    }
-    20% {
-        transform: translate(2px, -2px);
-        opacity: 0.9;
-    }
-    30% {
-        transform: translate(-1px, 1px);
-        opacity: 1;
-    }
-    40% {
-        transform: translate(1px, -1px);
-        opacity: 0.85;
-    }
-    50% {
-        transform: translate(0, 0);
-        opacity: 1;
-    }
-    60% {
-        transform: translate(3px, 3px);
-        opacity: 0.9;
-    }
-    70% {
-        transform: translate(-3px, -3px);
-        opacity: 0.8;
-    }
-    80% {
-        transform: translate(0, 2px);
-        opacity: 1;
-    }
-    90% {
-        transform: translate(2px, 0);
-        opacity: 0.95;
-    }
-    100% {
-        transform: translate(0, 0);
-        opacity: 1;
-    }
+    0%, 100% { transform: translate(0, 0); opacity: 1; }
+    10%, 70% { transform: translate(-2px, 2px); opacity: 0.8; }
+    20%, 50% { transform: translate(2px, -2px); opacity: 0.9; }
+    30%, 90% { transform: translate(-1px, 1px); opacity: 1; }
 }
 
-/* Pseudo-elements for Color Distortion (Optional) */
+/* Pseudo-elements for Color Distortion */
 #home h1::before,
 #home h1::after {
     content: 'TheRealNightmare';
@@ -187,129 +148,69 @@ p {
 }
 
 #home h1::before {
-    color: #3C6FFA; /* Red distortion */
+    color: #3C6FFA;
     transform: translate(-2px, -2px);
     clip-path: inset(0 50% 0 0);
     animation: glitch 2s infinite;
 }
 
 #home h1::after {
-    color: #453CFA; /* Cyan distortion */
+    color: #453CFA;
     transform: translate(2px, 2px);
     clip-path: inset(0 0 0 50%);
     animation: glitch 2s infinite alternate;
 }
 
-/* Media Queries for Mobile Responsiveness */
+/* Scrollbar Styling */
+body::-webkit-scrollbar {
+    height: 6px;
+}
 
-/* Small Devices (Phones) */
+body::-webkit-scrollbar-thumb {
+    background-color: #843CFA;
+    border-radius: 3px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #000;
+}
+
+/* Media Queries for Full Responsiveness */
+
+/* Extra Small Devices (Phones < 576px) */
 @media (max-width: 576px) {
-    /* Home Section */
-    #home h1 {
-        font-size: 2rem;
-    }
-
-    /* Button */
-    #home button {
-        font-size: 1rem;
-        padding: 0.5rem 1rem;
-    }
-
-    /* Boxes Styling */
-    .box-style {
-        height: 200px; /* Adjusted box height */
-    }
-
-    .box-text {
-        font-size: 1.2rem; /* Reduced text size */
-    }
-
-    /* Contact Box */
-    .contact-box {
-        width: 90%; /* Full width on mobile */
-        height: auto; /* Adjusted height */
-    }
-
-    .box-content {
-        padding: 1rem;
-    }
-
-    h2 {
-        font-size: 1.5rem; /* Smaller font size */
-    }
-
-    p {
-        font-size: 1rem; /* Adjusted text size */
-    }
+    #home h1 { font-size: 2rem; }
+    #home button { font-size: 1rem; padding: 0.5rem 1rem; }
+    .box-style { height: 200px; }
+    .box-text { font-size: 1.2rem; }
+    h2 { font-size: 1.5rem; }
+    p { font-size: 1rem; }
 }
 
-/* Medium Devices (Tablets) */
+/* Small Devices (Tablets < 768px) */
 @media (max-width: 768px) {
-    /* Home Section */
-    #home h1 {
-        font-size: 3rem;
-    }
-
-    /* Button */
-    #home button {
-        font-size: 1.1rem;
-        padding: 0.7rem 1.2rem;
-    }
-
-    /* Boxes Styling */
-    .box-style {
-        height: 250px; /* Slightly smaller height */
-    }
-
-    .box-text {
-        font-size: 1.4rem;
-    }
-
-    /* Contact Box */
-    .contact-box {
-        width: 80%;
-    }
-
-    h2 {
-        font-size: 1.8rem;
-    }
-
-    p {
-        font-size: 1.1rem;
-    }
+    #home h1 { font-size: 2.5rem; }
+    .box-style { height: 220px; }
+    h2 { font-size: 1.8rem; }
+    p { font-size: 1.1rem; }
 }
 
-/* Large Devices (Desktops) */
+/* Medium Devices (Tablets >= 768px and < 992px) */
+@media (min-width: 768px) and (max-width: 992px) {
+    #home h1 { font-size: 3rem; }
+    #home button { font-size: 1.1rem; }
+    .box-style { height: 240px; }
+    .contact-box { width: 80%; }
+}
+
+/* Large Devices (Desktops >= 992px and < 1200px) */
 @media (min-width: 992px) {
-    /* Home Section */
-    #home h1 {
-        font-size: 4rem;
-    }
+    .box-style { height: 250px; }
+    .contact-box { width: 70%; }
+}
 
-    /* Button */
-    #home button {
-        font-size: 1.2rem;
-    }
-
-    /* Boxes Styling */
-    .box-style {
-        height: 300px;
-    }
-
-    .box-text {
-        font-size: 1.5rem;
-    }
-
-    /* Contact Box */
-    .contact-box {
-        width: 60%;
-    }
-
-    h2 {
-        font-size: 2rem;
-    }
-
-    p {
-        font-size: 1.2rem;
-    }
+/* Extra Large Devices (Desktops >= 1200px) */
+@media (min-width: 1200px) {
+    #home h1 { font-size: 4rem; }
+    .contact-box { max-width: 800px; }
 }
