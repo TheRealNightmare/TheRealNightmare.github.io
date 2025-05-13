@@ -1,0 +1,40 @@
+baseURL: https://therealnightmare.github.io/
+languageCode: en-us
+title: Nightmare
+theme: PaperMod
+caches:
+  images:
+    dir: :cacheDir/images
+params:
+  hideFooter: false
+  profileMode:
+    enabled: true
+    title: "Nightmare" # optional default will be site title
+    subtitle: "Always open to new opportunities, collaborations, and discussions related to machine learning or Artificial intelligence. Let's build and create together!"
+    imageUrl: /img/image.png # optional
+    imageTitle: "<title of image as alt>" # optional
+    imageWidth: 120 # custom size
+    imageHeight: 120 # custom size
+  socialIcons: # optional
+    - name: "linkedIn"
+      url: "https://www.linkedin.com/in/therealnightmare/"
+    - name: "github"
+      url: "https://github.com/TheRealNightmare"
+    - name: "twitter"
+      url: "https://x.com/nightMARE496"
+
+menu:
+  main:
+    - identifier: home
+      name: Home
+      url: /
+      weight: 1
+
+    - identifier: posts
+      name: Posts
+      url: /posts/
+      weight: 2
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 3
