@@ -6,19 +6,19 @@ tags: ["Nuxt.js", "AWS", "CI/CD", "GitHub Actions", "DevOps", "EC2"]
 author: "Mirazul Islam Nahid"
 summary: "A technical deep dive into architecting a full CI/CD pipeline for Nuxt.js using GitHub Actions, AWS S3, CodeDeploy, and EC2."
 cover:
-  image: "" # Optional: Add an image to /static/img/ and reference it here (e.g., /img/aws-architecture.png)
+  image: "/img/CICD.png"
   alt: "CI/CD Pipeline Architecture"
   caption: ""
   relative: false
 ---
 
-Recently, I have made a full CI/CD pipeline for a Nuxt.js application. My goal was to move away from manual server uploads and create a professional "push-to-deploy" workflow.
+Recently I have made a full CI/CD pipeline for a Nuxt.js application. My goal was to move away from manual server uploads and create a professional "push-to-deploy" workflow.
 
-This post breaks down how I built an automated pipeline using **GitHub Actions**, **AWS S3**, **AWS CodeDeploy**, and **EC2**, along with the specific challenges I overcame regarding file structures and secret management.
+This post breaks down how I built an automated pipeline using **GitHub Actions**, **AWS S3**, **AWS CodeDeploy**, and **EC2** along with the specific challenges I overcame regarding the file structures and secret management.
 
 ## The High-Level Architecture
 
-I chose a classic, robust architecture for this deployment:
+I chose a classic robust architecture for this deployment:
 
 1.  **Source Control:** GitHub (Main branch).
 2.  **CI (Build):** GitHub Actions installs dependencies, builds the Nuxt app, and bundles it into a generic `.zip` artifact.
@@ -88,14 +88,14 @@ Once the zip file lands in S3, CodeDeploy takes over. It uses an `appspec.yml` f
 I defined three lifecycle hooks:
 
 1.  **ApplicationStop:** Runs a script to kill the existing PM2 process.
-2.  **AfterInstall:** Sets file permissions (ensuring the ubuntu user owns the files, not root).
+2.  **AfterInstall:** Sets file permissions (ensuring the ubuntu user owns the files not root).
 3.  **ApplicationStart:** Bootstraps the new version.
 
 ### Handling Secrets Securely
 
-I strictly avoided committing my `.env` file to GitHub. Instead, I used **AWS Systems Manager (SSM) Parameter Store**.
+I strictly avoided committing my `.env` file to GitHub. Instead I used **AWS Systems Manager (SSM) Parameter Store**.
 
-In my `app_start.sh` script, I included a step to fetch these secrets on the fly during deployment:
+In my `app_start.sh` script I included a step to fetch these secrets on the fly during deployment:
 
 ```bash
 aws ssm get-parameters-by-path
@@ -123,14 +123,12 @@ It wasn't smooth sailing on the first run. Here are two specific errors I encoun
 
 - **Error:** The deployment succeeded, but the site showed a "503 Service Unavailable".
 - **Diagnosis:** I SSH'd into the server and ran `pm2 list`. The process list was empty—the app had started and immediately died. Running `pm2 logs` revealed a missing environment variable.
-- **Fix:** I updated the SSM Parameter Store permissions policy attached to the EC2 role, allowing the server to actually read the secrets it was trying to fetch.
+- **Fix:** I updated the SSM Parameter Store permissions policy attached to the EC2 role allowing the server to actually read the secrets it was trying to fetch.
 
 ---
 
-## 🎯 Conclusion
+## Conclusion
 
-Building this pipeline bridged the gap between code and infrastructure. Now, when I push a commit, a complex series of events—building, zipping, uploading, stopping, configuring, and restarting—happens automatically in under 2 minutes.
+Building this pipeline bridged the gap between code and infrastructure. Now when I push a commit a complex series of events—building, zipping, uploading, stopping, configuring and restarting—happens automatically in under 2 minutes.
 
 This project reinforced the importance of immutable artifacts (zipping the build) and role-based security (IAM) in a production environment.
-
-**Tech Stack:** Nuxt.js, AWS (EC2, S3, CodeDeploy, SSM), Apache, PM2, GitHub Actions.
