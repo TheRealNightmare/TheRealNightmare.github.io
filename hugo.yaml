@@ -10,7 +10,7 @@ params:
   profileMode:
     enabled: true
     title: "Mirazul Islam Nahid" # optional default will be site title
-    subtitle: "Always open to new opportunities, collaborations, and discussions related to machine learning or Artificial intelligence. Let's build and create together!"
+    subtitle: "Always exploring, always learning, building things as I grow."
     imageUrl: /img/imge.jpg # optional
     imageTitle: "<title of image as alt>" # optional
     imageWidth: 120 # custom size
