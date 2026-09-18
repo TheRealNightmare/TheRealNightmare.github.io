@@ -1,0 +1,74 @@
+/*
+ * Neo-retro palette on a cream ground: pale cream page with a faint dot grid,
+ * lighter cream panels, red primary, amber secondary, near-black borders.
+ *
+ * --text is for anything on a panel, --on-paper for anything sitting directly
+ * on the page. Both are dark here; they stay separate so the ground can change
+ * without hunting through every rule.
+ *
+ * Retheming the whole site means editing this file and nothing else.
+ */
+
+:root {
+  /* Ground */
+  --paper: #f7eecb; /* cream page */
+  --dot: #dfcda0; /* faint dot grid on the page */
+
+  /* Hero band: solid deep red, a darkened version of the primary.
+     Solid on purpose — the page's dot grid does not carry across it. */
+  --hero-bg: #7a1f14;
+  --on-hero: #f8f1dc; /* 9.1:1 on the band */
+  --on-hero-muted: #e7d2bb;
+
+  /* Panels */
+  --surface: #fdf8e6; /* card, lighter than the page so it lifts */
+  --surface-2: #efe4c2; /* sunken cream */
+  --ink: #141414; /* every border */
+  --shadow-col: #141414; /* hard offset shadow */
+
+  /* Text on cream */
+  --text: #1a1a1a;
+  --text-muted: #4f4a42;
+  --text-faint: #6f6a60;
+
+  /* Text directly on the page */
+  --on-paper: #1a1a1a;
+  --on-paper-muted: #55503f;
+
+  /* Primary: retro red. --accent carries text (5.1:1 on cream),
+     --accent-bright is for solid decorative fills like icon tiles, where only
+     the 3:1 graphic threshold applies. */
+  --accent: #bf3324;
+  --accent-bright: #d6402f;
+  --accent-ink: #fbf5e4;
+  --accent-soft: #f3d9d2;
+
+  /* Secondary: amber */
+  --secondary: #9a6a12;
+  --secondary-bright: #e8a83f;
+  --secondary-soft: #f4e3c2;
+
+  /* Strong amber wash for hover and highlights */
+  --highlight: #e8a83f;
+
+  /* Dark text used on top of the bright amber/red fills */
+  --on-warm: #1a1a1a;
+
+  /* Flat structure: hard borders, solid offset shadows, zero radius */
+  --bw: 2px;
+  --bw-thick: 3px;
+  --radius: 0;
+  --shadow: 3px 3px 0 var(--shadow-col);
+  --shadow-lg: 5px 5px 0 var(--shadow-col);
+  --shadow-sm: 2px 2px 0 var(--shadow-col);
+
+  /* Type */
+  --font-display: 'Archivo Black', ui-sans-serif, system-ui, 'Segoe UI', sans-serif;
+  --font-body: 'Space Grotesk', ui-sans-serif, system-ui, 'Segoe UI', sans-serif;
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.86rem;
+  --fs-md: 0.97rem;
+  --fs-lg: 1.15rem;
+
+  --maxw: 1080px;
+}

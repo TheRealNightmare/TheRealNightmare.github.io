@@ -1,0 +1,106 @@
+{
+  "courses": [
+    {
+      "code": "CSE4325",
+      "name": "MicroProcessors & Microcontrollers",
+      "terms": {
+        "mid": {
+          "notes": [
+            {
+              "title": "Flag Practice",
+              "drive": "https://drive.google.com/file/d/1rj7C9zk6Zx6gvhm9QmJ28CPzl9imcUZA/view?usp=drive_link"
+            },
+            {
+              "title": "Interfacing Solve",
+              "drive": "https://drive.google.com/file/d/1F48zfJr5SWzCDb8QUQK9Y-8hu0YNK2CY/view?usp=drive_link"
+            },
+            {
+              "title": "Interrupt",
+              "drive": "https://drive.google.com/file/d/1Mfj2oI2n281XOTGngP9pnNm9VwdpwD24/view?usp=drive_link"
+            },
+            {
+              "title": "Memory Size",
+              "drive": "https://drive.google.com/file/d/1hhFAxaqVDzhChSbvCsuMCjD1xR4Soj_e/view?usp=drive_link"
+            },
+            {
+              "title": "Memory Segmentation",
+              "drive": "https://drive.google.com/file/d/1meKipoYiDN5A_Qd2dCkWcIHNkd4PgHs3/view?usp=drive_link"
+            },
+            {
+              "title": "Segmentation Practice",
+              "drive": "https://drive.google.com/file/d/188kJktKRzKpyN7e_zyjic9pomN4FkWFV/view?usp=drive_link"
+            },
+            {
+              "title": "Microprocessor Bus",
+              "drive": "https://drive.google.com/file/d/1wGCyKHpCXNwfesbxuPNxrcyWPqbW0F_v/view?usp=drive_link"
+            }
+          ],
+          "solves": []
+        },
+        "final": {
+          "notes": [
+            {
+              "title": "Bus Timing",
+              "drive": "https://drive.google.com/file/d/1xwUTr7QzJZBrqbcNRevqUlmOBtfpNeyW/view?usp=drive_link"
+            }
+          ],
+          "solves": []
+        }
+      }
+    },
+    {
+      "code": "ECO4101",
+      "name": "Economics",
+      "terms": {
+        "mid": {
+          "notes": [
+            {
+              "title": "Chapter 2",
+              "drive": "https://drive.google.com/file/d/1zZzrMg7d7RPfomzn977IFCIoiUvOSg29/view?usp=drive_link"
+            },
+            {
+              "title": "Chapter 3",
+              "drive": "https://drive.google.com/file/d/1lRfTYBn1dceuKvfPFgZEvGv0D5q7AWUN/view?usp=drive_link"
+            },
+            {
+              "title": "Chapter 4",
+              "drive": "https://drive.google.com/file/d/1aoyxAQFfi2n_6XjdD0rO3ur4SZxXFNLZ/view?usp=drive_link"
+            },
+            {
+              "title": "Chapter 5",
+              "drive": "https://drive.google.com/file/d/1tvgAN_xKxvf7LXrcAu5qFCZRasxq_Hep/view?usp=drive_link"
+            },
+            {
+              "title": "Chapter 6",
+              "drive": "https://drive.google.com/file/d/1ZfsqOd19owPiNep9UWkjffTQq4y7rdag/view?usp=drive_link"
+            },
+            {
+              "title": "Chapter 13",
+              "drive": "https://drive.google.com/file/d/1meNhOKn_dIodPjwM6cmfRp5z4YK4DtXP/view?usp=drive_link"
+            }
+            
+          ],
+          "solves": [
+            {
+              "title": "Mid Assignment",
+              "drive": "https://drive.google.com/file/d/12WyCmI-fHlcsn8hvbsEObiREO847owFy/view?usp=drive_link"
+            }
+          ]
+        },
+        "final": {
+          "notes": [
+            {
+              "title": "Chapter 14",
+              "drive": "https://drive.google.com/file/d/1-3CGXaRvEfnwtmpfU7x9GhesutOflIMO/view?usp=drive_link"
+            },
+            {
+              "title": "Chapter 15 & 16",
+              "drive": "https://drive.google.com/file/d/1Tj4oIFHn8BkUwh5XtbNtDG4Z4dS_XTnU/view?usp=drive_link"
+            }
+          ],
+          "solves": []
+        }
+      }
+    }
+  ]
+}
