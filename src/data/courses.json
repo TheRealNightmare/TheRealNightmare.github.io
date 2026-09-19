@@ -78,7 +78,6 @@
               "title": "Chapter 13",
               "drive": "https://drive.google.com/file/d/1meNhOKn_dIodPjwM6cmfRp5z4YK4DtXP/view?usp=drive_link"
             }
-            
           ],
           "solves": [
             {
@@ -96,6 +95,38 @@
             {
               "title": "Chapter 15 & 16",
               "drive": "https://drive.google.com/file/d/1Tj4oIFHn8BkUwh5XtbNtDG4Z4dS_XTnU/view?usp=drive_link"
+            }
+          ],
+          "solves": []
+        }
+      }
+    },
+    {
+      "code": "CSE4509",
+      "name": "Operating Systems",
+      "terms": {
+        "mid": {
+          "notes": [
+            {
+              "title": "Concurrency & Locking",
+              "drive": "https://drive.google.com/file/d/1MvVbTgi1Y79SsUFl0fx8CdPYXgl-kY8L/view?usp=drive_link"
+            },
+            {
+              "title": "Process & Context Switching",
+              "drive": "https://drive.google.com/file/d/1ld2_gjewqNz5ms5n8dBPtgB1F7lMdi2-/view?usp=drive_link"
+            },
+            {
+              "title": "Scheduling",
+              "drive": "https://drive.google.com/file/d/1Rw2lWvWVGJv4JidS-QFVpUInzIY35xsX/view?usp=drive_link"
+            }
+          ],
+          "solves": []
+        },
+        "final": {
+          "notes": [
+            {
+              "title": "Deadlock",
+              "drive": "https://drive.google.com/file/d/1VaifqWiEcVnaZN_hlwek6jveJujb7s8G/view?usp=drive_link"
             }
           ],
           "solves": []
