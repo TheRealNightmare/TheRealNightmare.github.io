@@ -76,7 +76,12 @@
               "drive": "https://drive.google.com/file/d/1UqeUaETRT2lr1Bb-cGPmIHaKps7DCyed/view?usp=drive_link"
             }
           ],
-          "solves": []
+          "solves": [
+            {
+              "title": "Spring 2026",
+              "drive": "https://drive.google.com/file/d/1Fiw1PPfAJJGOGVB9rsJPZHr1MeuM9kFu/view?usp=drive_link"
+            }
+          ]
         }
       }
     },
@@ -181,7 +186,12 @@
               "drive": "https://drive.google.com/file/d/1cxIYNYWMZfgFHoz-S1LCs3XNxWcaPIsI/view?usp=drive_link"
             }
           ],
-          "solves": []
+          "solves": [
+            {
+              "title": "Spring 2026",
+              "drive": "https://drive.google.com/file/d/1SUsw21S8RCYTaZ70WRmzgAIRhXENiDy2/view?usp=drive_link"
+            }
+          ]
         }
       }
     }
